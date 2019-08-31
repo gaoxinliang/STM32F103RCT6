@@ -22,6 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 #include <stdio.h>
+#include "led.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -52,19 +53,54 @@
   */
 int main(void)
 {
-  /*!< At this stage the microcontroller clock setting is already configured, 
-       this is done through SystemInit() function which is called from startup
-       file (startup_stm32f10x_xx.s) before to branch to application main.
-       To reconfigure the default setting of SystemInit() function, refer to
-       system_stm32f10x.c file
-     */     
-	
+
 	SystemInit();
 	
-  /* Infinite loop */
-  while (1)
-  {
-  }
+	
+	led_init();
+	
+	/* Infinite loop */
+	while (1)
+	{
+//		led_on();
+//		led_off();
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+		/* Set PD0 and PD2 */
+		GPIOC->BSRR = 0x00000001;
+		/* Reset PD0 and PD2 */
+		GPIOC->BRR  = 0x00000001;
+	}
 }
 
 /**

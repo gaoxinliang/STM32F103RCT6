@@ -54,7 +54,7 @@
 int main(void)
 {
 
-	SystemInit();
+	//SystemInit();
 	
 	
 	led_init();
